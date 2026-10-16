@@ -1,0 +1,136 @@
+{
+  "summary": {
+    "total": 21,
+    "passed": 17,
+    "failed": 4,
+    "blocked": 0
+  },
+  "results": [
+    {
+      "category": "1. Admin Auth & RBAC",
+      "name": "Email Authentication",
+      "status": "FAIL",
+      "details": "Status 401, {\"success\":false,\"error\":\"ভুল পাসওয়ার্ড! অনুগ্রহ করে সঠিক পাসওয়ার্ড প্রদান করুন।\"}"
+    },
+    {
+      "category": "1. Admin Auth & RBAC",
+      "name": "Mobile Authentication",
+      "status": "FAIL",
+      "details": "Status 401"
+    },
+    {
+      "category": "1. Admin Auth & RBAC",
+      "name": "Session Verification (/me)",
+      "status": "PASS",
+      "details": "Active session for role super_admin"
+    },
+    {
+      "category": "1. Admin Auth & RBAC",
+      "name": "Role-Based Access Control (RBAC)",
+      "status": "FAIL",
+      "details": "Could not authenticate staff account: {\"success\":false,\"error\":\"ভুল পাসওয়ার্ড! অনুগ্রহ করে সঠিক পাসওয়ার্ড প্রদান করুন।\"}"
+    },
+    {
+      "category": "1. Admin Auth & RBAC",
+      "name": "CSRF Protection",
+      "status": "PASS",
+      "details": "CSRF verification active"
+    },
+    {
+      "category": "2. Database & Persistence",
+      "name": "SQLite Initialization & Schema",
+      "status": "PASS",
+      "details": "32 Tables initialized in SQLite: 37 tables verified"
+    },
+    {
+      "category": "2. Database & Persistence",
+      "name": "Database Backup API",
+      "status": "PASS",
+      "details": "Backup endpoint returned 200 OK"
+    },
+    {
+      "category": "2. Database & Persistence",
+      "name": "Data Persistence Verification",
+      "status": "PASS",
+      "details": "Direct SQLite read/write confirmed persistent"
+    },
+    {
+      "category": "3. Catalog & Inventory",
+      "name": "Product & Variant Retrieval",
+      "status": "PASS",
+      "details": "Loaded 2 products with variants and SKUs"
+    },
+    {
+      "category": "3. Catalog & Inventory",
+      "name": "Admin Product Edit & Variant Control",
+      "status": "PASS",
+      "details": "Successfully updated product prod-1791813639232"
+    },
+    {
+      "category": "4. Cart & Checkout",
+      "name": "Cart Synchronization",
+      "status": "PASS",
+      "details": "Customer cart synced to database session"
+    },
+    {
+      "category": "4. Cart & Checkout",
+      "name": "Coupon Validation API",
+      "status": "PASS",
+      "details": "Active coupon 'BASTRA100' retrieved"
+    },
+    {
+      "category": "4. Cart & Checkout",
+      "name": "Order Creation & Stock Deduction",
+      "status": "FAIL",
+      "details": "Status 400: {\"success\":false,\"error\":\"এই কুপনটি ব্যবহার করতে ন্যূনতম ৳1000 টাকার অর্ডার প্রয়োজন।\"}"
+    },
+    {
+      "category": "6. AI Assistant & Privacy",
+      "name": "Real DB Product Knowledge Query",
+      "status": "PASS",
+      "details": "AI responded using real database product catalog"
+    },
+    {
+      "category": "6. AI Assistant & Privacy",
+      "name": "Customer Order Privacy Protection",
+      "status": "PASS",
+      "details": "Order privacy verified"
+    },
+    {
+      "category": "6. AI Assistant & Privacy",
+      "name": "Conversation History & Delivery Inquiry",
+      "status": "PASS",
+      "details": "Multi-turn memory handled correctly"
+    },
+    {
+      "category": "7. ShopContext & Data Integrity",
+      "name": "Public Settings Allowlist Sanitization",
+      "status": "PASS",
+      "details": "No courier secrets or sensitive API keys exposed publicly"
+    },
+    {
+      "category": "7. ShopContext & Data Integrity",
+      "name": "Coupon & Demo Control",
+      "status": "PASS",
+      "details": "3 active coupons in database"
+    },
+    {
+      "category": "8. CMS & Analytics Separation",
+      "name": "Customer vs Marketing Analytics Endpoints",
+      "status": "PASS",
+      "details": "Independent endpoints for Customer (LTV, repeat rates), Marketing (Campaign ROI, coupons), and Sales"
+    },
+    {
+      "category": "9. Admin Security & Hardcoded Scans",
+      "name": "Admin Search URL Shortcut",
+      "status": "PASS",
+      "details": "Header search bar correctly handles exact admin URL navigation"
+    },
+    {
+      "category": "9. Admin Security & Hardcoded Scans",
+      "name": "Admin Centralized Fetch Security",
+      "status": "PASS",
+      "details": "All admin API calls pass Bearer token and CSRF header"
+    }
+  ]
+}
